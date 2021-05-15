@@ -1,0 +1,5 @@
+docker login ==> login to docker hub
+docker version ==> installed version 
+docker image ls ==> list the docker image
+docker container ls ==> list the docker container
+docker ps ==> display the running container details
