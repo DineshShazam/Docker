@@ -1,5 +1,30 @@
-docker login ==> login to docker hub
-docker version ==> installed version 
-docker image ls ==> list the docker image
-docker container ls ==> list the docker container
-docker ps ==> display the running container details
+- docker login ==> login to docker hub.
+- docker version ==> installed version.
+
+LISTING THE CONTAINER
+- docker image ls ==> list the docker image.
+- docker container ls ==> list the docker container.
+- docker ps ==> display the running container details.
+- docker ps --all ==> display all the container even the exited container too.
+
+START THE CONTAINER
+- docker start <container-id> ==> start the container again. 
+- docker start -a <container-id> ==> starts the container and gives the output of the container.
+- docker run <container-id> ls ==> overrides the container main execute command and executes the command we gave (i.e ls)
+
+STOP THE CONTAINER
+- docker stop <container-id>
+- docker kill <container-id 
+
+DELETEING
+- docker system prune ==>
+		This will remove - all stopped container
+						 - all networks not used by at least one container
+						 - all build cache 
+						 
+LOGS
+- docker logs <container-id>
+
+CONTAINER CLI
+- docker exec -it <container-id> <cmd> ==> executes the cmd we give on the container terminal
+- docker exec -it <container-id> sh ==> gets the shell access of the container
