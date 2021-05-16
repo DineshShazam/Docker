@@ -47,3 +47,12 @@ BUILDING IMAGES
 - docker build . ==> BUILDING IMAGES
 
 - docker build -t 16091997/<repo-name>:latest .  ==> build images with name tag
+
+CONTAINER PORT MAPPING
+- docker run -p <host port> : <container port> <image-id> ==> request comes to host port will be re-directed to container port
+
+
+INSTALL NODE-JS ON UBUNTU
+- curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.35.3/install.sh | bash
+- source ~/.nvm/nvm.sh
+- nvm install node
