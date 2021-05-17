@@ -56,3 +56,17 @@ INSTALL NODE-JS ON UBUNTU
 - curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.35.3/install.sh | bash
 - source ~/.nvm/nvm.sh
 - nvm install node
+
+DOCKER-COMPOSE
+
+- docker-compose up --build ==> build the container and start the app.
+- docker-compose up -d ==> starts the container 
+- docker-compose down ==> stops the container
+- docker-compose ps ==> list the compose running container , must be run inside the docker-compose.yml path
+
+- Restart Policies
+	- "no" ==> never restarts the container even if its crashes. , no shoudl be mentioned inside string
+	- always ==> if the container stops for *any reason* it restarts.
+	- on-failure ==> only restarts if the container stops with error code.
+	- unless-stopped ==> always restarts unless we(developers) forcibily stops it.
+	
