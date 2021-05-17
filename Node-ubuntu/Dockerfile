@@ -50,7 +50,7 @@ COPY Node/package.json /usr/app
 
 RUN npm install
 
-COPY Node/ /usr/app 
+COPY ./ /usr/app 
 
 CMD ["node","index.js"]
 #### RUNNING NODE-JS ON UBUNTU ####

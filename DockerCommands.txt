@@ -8,13 +8,22 @@ LISTING THE CONTAINER
 - docker ps --all ==> display all the container even the exited container too.
 
 START THE CONTAINER
+- docker run -d <Image-id> ==> starts the container in the background.
 - docker start <container-id> ==> start the container again. 
 - docker start -a <container-id> ==> starts the container and gives the output of the container.
 - docker run <container-id> ls ==> overrides the container main execute command and executes the command we gave (i.e ls)
 
+
 STOP THE CONTAINER
 - docker stop <container-id>
 - docker kill <container-id 
+
+DOCKER START ON STARTUP 
+- sudo systemctl enable docker.service
+- sudo systemctl enable containerd.service
+
+- Sudo systemctl disable docker.service
+- sudo systemctl disable containerd.service
 
 DELETEING
 - docker system prune ==>
@@ -28,3 +37,13 @@ LOGS
 CONTAINER CLI
 - docker exec -it <container-id> <cmd> ==> executes the cmd we give on the container terminal
 - docker exec -it <container-id> sh ==> gets the shell access of the container
+
+BUILDING IMAGES
+- create a DOckerfile
+	- specify the base Image
+	- run some commands
+	- specify a command to run on container startup
+	
+- docker build . ==> BUILDING IMAGES
+
+- docker build -t 16091997/<repo-name>:latest .  ==> build images with name tag
