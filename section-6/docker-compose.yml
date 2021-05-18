@@ -1,0 +1,17 @@
+version: '3'
+services: 
+    web:
+        build: 
+            # mention the folder path of our project . means current working directory 
+            context: .  
+            # mention our custom docker file
+            dockerfile: Dockerfile.dev
+        ports: 
+            - "3000:3000"
+        volumes: 
+            # referencing the container node_modules 
+            - /usr/app/node_modules
+            # referencing our current working directory to container working directory 
+            - .:/usr/app
+        # while starting with compose our react app kills immedieatly to stop that we use this stdin_open property
+        stdin_open: true
