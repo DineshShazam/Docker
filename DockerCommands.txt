@@ -57,6 +57,9 @@ INSTALL NODE-JS ON UBUNTU
 - source ~/.nvm/nvm.sh
 - nvm install node
 
+BUILD DOCKERFILE WITH CUSTOM NAME
+- docker build -f <custome fileName> .
+
 DOCKER-COMPOSE
 
 - docker-compose up --build ==> build the container and start the app.
@@ -69,4 +72,9 @@ DOCKER-COMPOSE
 	- always ==> if the container stops for *any reason* it restarts.
 	- on-failure ==> only restarts if the container stops with error code.
 	- unless-stopped ==> always restarts unless we(developers) forcibily stops it.
-	
+
+DOCKER VOLUME
+- docker run -p 3000:3000 -v /usr/app/node_modules -v $(pwd):/usr/app <image-id>
+	==> running a container with volume 
+		- -v $(pwd):/usr/app ==> host directory has been referenced to container working directory
+		- -v /usr/app/node_modules ==> for node_modules container directory is being referenced
